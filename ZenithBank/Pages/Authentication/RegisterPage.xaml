@@ -24,7 +24,7 @@
            HorizontalTextAlignment="Center"
             />
 
-        <sf:SfTextInputLayout  Hint="BVN" OutlineCornerRadius="25" HeightRequest="90">
+        <sf:SfTextInputLayout  Hint="BVN" OutlineCornerRadius="5" HeightRequest="90">
             <Entry x:Name="BVNEntry"
              Placeholder="Enter BVN"
              FontSize="16"

@@ -9,14 +9,19 @@ public partial class WelcomePage : ContentPage
 	public WelcomePage()
 	{
 		InitializeComponent();
-        var currentTheme = Application.Current!.UserAppTheme;
-        var currentIndex = currentTheme == AppTheme.Light ? 0 : 1;
-        ThemeSegmentedControl.SelectedIndex = currentIndex;
-
         var theme = SecureStorage.GetAsync("theme").Result;
         var card = SecureStorage.GetAsync("cardTheme").Result;
-        //#656768
-        if (theme == null) SecureStorage.SetAsync("theme", currentIndex.ToString());
+
+        var currentTheme = Application.Current!.UserAppTheme;
+        var currentIndex = currentTheme == AppTheme.Light ? 0 : 1;
+       
+        ThemeSegmentedControl.SelectedIndex = currentIndex;
+ 
+        if (theme == null) 
+            SecureStorage.SetAsync("theme", currentIndex.ToString());
+        else
+            ThemeSegmentedControl.SelectedIndex = int.Parse(theme);
+
         if (card == null)
         {
             if (currentIndex == 0)
@@ -41,11 +46,14 @@ public partial class WelcomePage : ContentPage
 
         var currentTheme = Application.Current!.UserAppTheme;
         var currentIndex = currentTheme == AppTheme.Light ? 0 : 1;
-        ThemeSegmentedControl.SelectedIndex = currentIndex;
         
+        ThemeSegmentedControl.SelectedIndex = currentIndex;
+
+        SecureStorage.SetAsync("theme", $"{currentIndex}");
+
         if (currentIndex == 1)
         {
-         
+        
             SecureStorage.SetAsync("cardTheme", "#3d3d3d");
             var statusBarBehavior = new StatusBarBehavior
             {

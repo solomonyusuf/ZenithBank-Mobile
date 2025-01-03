@@ -22,20 +22,21 @@
              HorizontalTextAlignment="Center"
              />
         <!-- Username Entry -->
-        <sf:SfTextInputLayout  Hint="Username" OutlineCornerRadius="25" HeightRequest="90">
+        <sf:SfTextInputLayout  Hint="Username" OutlineCornerRadius="5" HeightRequest="90">
             <Entry x:Name="UsernameEntry"
                    Placeholder="Enter Username"
                    FontSize="16"
                    TextColor="#333"     
                    PlaceholderColor="#aaa"
                    Keyboard="Email"
+                   
                    />
         </sf:SfTextInputLayout>
 
 
 
         <!-- Password Entry -->
-        <sf:SfTextInputLayout  Hint="Password" OutlineCornerRadius="25" HeightRequest="90">
+        <sf:SfTextInputLayout  Hint="Password" OutlineCornerRadius="5" HeightRequest="90">
             <Entry x:Name="PasswordEntry"
               Placeholder="Enter Password"
               FontSize="16"
