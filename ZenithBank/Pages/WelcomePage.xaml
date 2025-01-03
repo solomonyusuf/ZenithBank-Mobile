@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="ZenithBank.Pages.WelcomePage"
+             Title=""
+             >
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#17171a"
+                                   StatusBarStyle="LightContent" />
+
+
+    </ContentPage.Behaviors>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="15" Spacing="20">
+        <!-- Bank Logo -->
+        <Image Source="logo.png" 
+               HeightRequest="100"
+               HorizontalOptions="Center" />
+
+        <!-- Welcome Text -->
+        <Label Text="Welcome to Zenith Bank"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               />
+
+        <Label Text="Your trusted partner in financial services"
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+              />
+
+        <!-- Login Button -->
+        <Button Text="Login"
+                BackgroundColor="#ee232b"
+                TextColor="White"
+                CornerRadius="25"
+                HeightRequest="50"
+                Clicked="OnLoginClicked" />
+
+        <!-- Register Button -->
+        <Button Text="Register"
+                BackgroundColor="#868786"
+                TextColor="White"
+                CornerRadius="25"
+                HeightRequest="50"
+                Clicked="OnRegisterClicked" />
+
+        <sf:SfSegmentedControl x:Name="ThemeSegmentedControl" 
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" 
+             SelectionChanged="SfSegmentedControl_SelectionChanged"
+             SegmentWidth="40"
+             SegmentHeight="40">
+            <sf:SfSegmentedControl.ItemsSource>
+                <x:Array Type="{x:Type sf:SfSegmentItem}">
+                    <sf:SfSegmentItem/>
+                    <sf:SfSegmentItem/>
+                </x:Array>
+            </sf:SfSegmentedControl.ItemsSource>
+        </sf:SfSegmentedControl>
+
+    </StackLayout>
+
+</ContentPage>

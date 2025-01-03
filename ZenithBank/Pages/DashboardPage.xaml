@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZenithBank.Pages.DashboardPage"
+             xmlns:local="clr-namespace:ZenithBank.Pages.Shared">
+    
+    <Grid RowDefinitions="20,20" Padding="0,25,0,0">
+        <HorizontalStackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
+            <Image 
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="logo.png"
+                />
+        </HorizontalStackLayout>
+        <StackLayout Grid.Row="1" Padding="10,20,10,0">
+            <!-- Card with Background #ee232b -->
+            <Frame BackgroundColor="#ee232b"
+                   Padding="20"
+                   CornerRadius="15"
+                   HasShadow="True">
+                <StackLayout>
+                    <HorizontalStackLayout>
+                        <Image Margin="3" Source="wallet.png" HeightRequest="20"   />
+                        <Label 
+                            Margin="3"
+                             Text="Current Balance"
+                             TextColor="White"
+                             FontSize="13" 
+                             HorizontalOptions="Start" />
+                        <Label 
+                             Margin="85,0,0,0"
+                             Text="See History >"
+                             TextColor="White"
+                             FontSize="12" 
+                             HorizontalOptions="End" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label 
+                         Margin="0,10,0,0"
+                         Text="₦250,000,000"
+                         TextColor="White"
+                         FontSize="24"
+                         HorizontalOptions="StartAndExpand" />
+
+                        <Image Margin="100,0,0,0" Source="closedeye.png" HeightRequest="20"   />
+
+                   </HorizontalStackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="{Binding cardColor}"
+                   Padding="20"
+                   Margin="0,20,0,0"
+                   CornerRadius="15"
+                   HasShadow="True">    
+                <HorizontalStackLayout Spacing="40">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="naira.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="To Zenith"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />   
+                        
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="institution.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Bank"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="creditcard.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Withdrawal"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="Transparent"
+                   Padding="20"
+                   Margin="0,20,0,0"
+                   CornerRadius="15"
+                   HasShadow="False">
+                <HorizontalStackLayout ClassId="up" Spacing="40">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="naira.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Loan"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="institution.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="List Banks"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="creditcard.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Invoices"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+            </Frame>
+            
+            <Frame 
+                   BackgroundColor="Transparent"
+                   Padding="20"
+                   Margin="0,20,0,0"
+                   CornerRadius="15"
+                   HasShadow="False">
+                <HorizontalStackLayout Spacing="40">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="naira.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Bulk "
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="institution.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="Manage"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="30" HeightRequest="60" WidthRequest="60" HasShadow="False" BackgroundColor="{StaticResource Tertiary}">
+                            <Image Source="creditcard.png" HeightRequest="50" HorizontalOptions="Center"   />
+                        </Frame>
+                        <Label 
+                             Margin="3"
+                             Text="ATM Cards"
+                             FontSize="13" 
+                             HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+            </Frame>
+
+            
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

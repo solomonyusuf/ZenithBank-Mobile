@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ZenithBank.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:local="clr-namespace:ZenithBank"
+    xmlns:pages="clr-namespace:ZenithBank.Pages"
+    xmlns:auth="clr-namespace:ZenithBank.Pages.Authentication"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ZenithBank">
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate pages:WelcomePage}"
+        Route="welcomePage" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:DashboardPage}"
+        Route="DashboardPage" />    
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate auth:LoginPage}"
+        Route="LoginPage" />
+    
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate auth:RegisterPage}"
+        Route="RegisterPage" />
+
+</Shell>
